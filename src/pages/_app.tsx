@@ -1,12 +1,11 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { useReportWebVitals } from "next/web-vitals";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Component {...pageProps} />
-      <SpeedInsights />
-    </>
-  );
+  useReportWebVitals((metric) => {
+    console.log(metric.name, "= ", metric.value);
+  });
+
+  return <Component {...pageProps} />;
 }
