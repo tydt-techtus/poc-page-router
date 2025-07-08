@@ -64,6 +64,9 @@ export const getServerSideProps = async ({
       random +
       "&test=" +
       test,
+    "https://dummyjson.com/users?delay=2000",
+    "https://dummyjson.com/todos?delay=3000",
+    "https://fakeresponder.com/?sleep=2000",
   ];
 
   const promises = END_POINTS.map((endpoint) =>
