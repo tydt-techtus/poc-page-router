@@ -10,6 +10,12 @@ export const getServerSideProps = async ({
   const test = query.test || "";
   const random = Math.random().toString(36).substring(2, 15);
   const END_POINTS = [
+    "https://dummy-json.mock.beeceptor.com/posts",
+    "https://dummy-json.mock.beeceptor.com/comments",
+    "https://dummy-json.mock.beeceptor.com/companies",
+    "https://dummy-json.mock.beeceptor.com/users",
+    "https://dummy-json.mock.beeceptor.com/todos",
+    "https://dummy-json.mock.beeceptor.com/quotes",
     "https://jsonplaceholder.typicode.com/todos?abc=" +
       random +
       "&test=" +
