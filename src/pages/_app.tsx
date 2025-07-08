@@ -4,7 +4,9 @@ import { useReportWebVitals } from "next/web-vitals";
 
 export default function App({ Component, pageProps }: AppProps) {
   useReportWebVitals((metric) => {
-    console.log(metric.name, "= ", metric.value);
+    if (metric.name === "TTFB") {
+      console.log("TTFB = ", metric.value);
+    }
   });
 
   return <Component {...pageProps} />;
